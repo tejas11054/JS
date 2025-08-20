@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guess Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>🎯 Number Guessing Game</h1>
+    <p>Guess a number between <strong>1</strong> and <strong>100</strong></p>
+    
+    <input type="number" id="guess" placeholder="Enter your guess" />
+    <div class="buttons">
+      <button onclick="checkGuess()">Submit</button>
+      <button onclick="newGame()">New Game</button>
+    </div>
+    
+    <p class="message" id="message"></p>
+  </div>
+
+  <script>
+    let randomNumber;
+    let attempts;
+
+    function newGame() {
+      randomNumber = Math.floor(Math.random() * 100) + 1;
+      attempts = 0;
+      document.getElementById('message').textContent = "";
+      document.getElementById('guess').value = "";
+    }
+
+    function checkGuess() {
+      const guess = Number(document.getElementById('guess').value);
+      attempts++;
+
+      if (!guess) {
+        document.getElementById('message').textContent = "⚠️ Please enter a number!";
+        return;
+      }
+
+      console.log(randomNumber);
+
+      if (guess === randomNumber) {
+        document.getElementById('message').textContent = `🎉 Correct! You guessed it in ${attempts} tries.`;
+        document.getElementById('message').style.color = "green";
+      } else if (guess < randomNumber) {
+        document.getElementById('message').textContent = "⬇️ Too low! Try again.";
+        document.getElementById('message').style.color = "blue";
+      } else {
+        document.getElementById('message').textContent = "⬆️ Too high! Try again.";
+        document.getElementById('message').style.color = "red";
+      }
+    }
+
+    // start game on load
+    newGame();
+  </script>
+</body>
+</html>

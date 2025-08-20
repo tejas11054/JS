@@ -1,0 +1,90 @@
+/* Background with gradient */
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Centered card container */
+  .todo-container {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .todo-container h2 {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Add button with gradient */
+  .btn-gradient {
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 20px;
+    transition: 0.3s;
+    border-radius: 10px;
+  }
+  
+  .btn-gradient:hover {
+    background: linear-gradient(45deg, #ee0979, #ff6a00);
+    transform: scale(1.05);
+  }
+  
+  /* Task Item */
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    border-left: 6px solid #667eea;
+    transition: all 0.3s ease;
+  }
+  
+  .todo-item:hover {
+    background: #eef0ff;
+    transform: translateX(5px);
+  }
+  
+  /* Task text */
+  .todo-item span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #444;
+  }
+  
+ 
+  /* Delete button */
+.delete-btn {
+    border: none;
+    background: #c82333; /* Darker red */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+  
+  .delete-btn:hover {
+    background: #a71d2a; /* Even darker on hover */
+    transform: scale(1.1);
+  }
+  
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

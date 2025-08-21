@@ -1,0 +1,35 @@
+.instructions-box {
+    border: 6px dashed green;
+    background: #f8f8d4;
+    padding: 24px;
+    border-radius: 14px;
+    max-width: 570px;
+}
+
+#numberDisplay .number-ball {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: black;
+    background: #99f0ff;
+    border: 2px solid #87d0e1;
+    transition: background .3s, color .3s, border .3s;
+}
+.number-ball.yellow {
+    background: yellow !important;
+    color: #555 !important;
+}
+.number-ball.red {
+    background: #f85050 !important;
+    color: #fff !important;
+}
+.number-ball.green {
+    background: #20cd60 !important;
+    color: #fff !important;
+}

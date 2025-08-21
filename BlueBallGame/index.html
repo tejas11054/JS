@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+    <div class="container mt-4">
+        <div class="instructions-box mx-auto mb-4">
+            <h3 class="mb-3">Instructions of the Game:</h3>
+            <ul>
+                <li>Guess the Number by moving the slider</li>
+                <li>Color changes to <span style="color:goldenrod;">Yellow</span> if the guessed number is smaller</li>
+                <li>Color changes to <span style="color:red;">Red</span> if the guessed number is greater</li>
+                <li>Color changes to <span style="color:green;">Green</span> if the guessed number is correct</li>
+                <li>Maximum Attempts allowed is 6</li>
+            </ul>
+        </div>
+
+        <div class="text-center">
+            <input type="range" min="1" max="10" value="1" step="1" id="guessSlider" class="form-range" style="max-width:400px;">
+        </div>
+
+        <div class="d-flex justify-content-center my-3" id="numberDisplay">
+            <!-- Number balls will go here -->
+        </div>
+
+        <div class="text-center mt-4">
+            <h5 id="attemptDisplay"></h5>
+            <h5 id="resultDisplay" style="font-weight:bold;"></h5>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f8ff;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.cross {
+  font-size: 60px;
+  color: red;
+}
+
+#message {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
